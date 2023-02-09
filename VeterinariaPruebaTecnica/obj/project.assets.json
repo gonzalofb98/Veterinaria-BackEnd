@@ -88,6 +88,29 @@
         "frameworkReferences": [
           "Microsoft.AspNetCore.App"
         ]
+      },
+      "Datos/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "Entities": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Datos.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Datos.dll": {}
+        }
+      },
+      "Entities/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "compile": {
+          "bin/placeholder/Entities.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Entities.dll": {}
+        }
       }
     }
   },
@@ -216,10 +239,22 @@
         "swashbuckle.aspnetcore.swaggerui.6.2.3.nupkg.sha512",
         "swashbuckle.aspnetcore.swaggerui.nuspec"
       ]
+    },
+    "Datos/1.0.0": {
+      "type": "project",
+      "path": "../Datos/Datos.csproj",
+      "msbuildProject": "../Datos/Datos.csproj"
+    },
+    "Entities/1.0.0": {
+      "type": "project",
+      "path": "../Entities/Entities.csproj",
+      "msbuildProject": "../Entities/Entities.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net6.0": [
+      "Datos >= 1.0.0",
+      "Entities >= 1.0.0",
       "Swashbuckle.AspNetCore >= 6.2.3"
     ]
   },
@@ -249,7 +284,14 @@
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "D:\\Usuario\\Desktop\\Gonzalo\\TotalCoin\\VeterinariaPruebaTecnica\\VeterinariaPruebaTecnica\\Datos\\Datos.csproj": {
+              "projectPath": "D:\\Usuario\\Desktop\\Gonzalo\\TotalCoin\\VeterinariaPruebaTecnica\\VeterinariaPruebaTecnica\\Datos\\Datos.csproj"
+            },
+            "D:\\Usuario\\Desktop\\Gonzalo\\TotalCoin\\VeterinariaPruebaTecnica\\VeterinariaPruebaTecnica\\Entities\\Entities.csproj": {
+              "projectPath": "D:\\Usuario\\Desktop\\Gonzalo\\TotalCoin\\VeterinariaPruebaTecnica\\VeterinariaPruebaTecnica\\Entities\\Entities.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

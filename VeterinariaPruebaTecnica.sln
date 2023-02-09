@@ -5,6 +5,12 @@ VisualStudioVersion = 17.4.33110.190
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VeterinariaPruebaTecnica", "VeterinariaPruebaTecnica\VeterinariaPruebaTecnica.csproj", "{489F8269-3355-49C3-AA3B-E5721A10CC4F}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "API", "API", "{1248FD02-3A54-41BE-A216-02995AB20FE2}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Entities", "Entities", "{F14E3BB1-B3F4-4532-A3D2-829F61240E9D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Entities", "Entities\Entities.csproj", "{544E8258-2A97-4067-9271-9CA39037F1EB}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,9 +21,17 @@ Global
 		{489F8269-3355-49C3-AA3B-E5721A10CC4F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{489F8269-3355-49C3-AA3B-E5721A10CC4F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{489F8269-3355-49C3-AA3B-E5721A10CC4F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{544E8258-2A97-4067-9271-9CA39037F1EB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{544E8258-2A97-4067-9271-9CA39037F1EB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{544E8258-2A97-4067-9271-9CA39037F1EB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{544E8258-2A97-4067-9271-9CA39037F1EB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{489F8269-3355-49C3-AA3B-E5721A10CC4F} = {1248FD02-3A54-41BE-A216-02995AB20FE2}
+		{544E8258-2A97-4067-9271-9CA39037F1EB} = {F14E3BB1-B3F4-4532-A3D2-829F61240E9D}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {6CFEF92B-9412-44A7-8D18-0F7C6C54D2E4}
