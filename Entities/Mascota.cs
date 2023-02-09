@@ -6,15 +6,20 @@ using System.Threading.Tasks;
 
 namespace Entities
 {
-    public class Mascota : EntidadBase
+    public abstract class Mascota : EntidadBase
     {
-        public String Nombre { get; set; }
-        public int AñoNacimiento { get; set; }
-        public float Peso { get; set; }
+        public string Nombre { get; set; }
+        public int AnioNacimiento { get; set; }
+        public double Peso { get; set; }
+        public bool Castrado { get; set; }
+        public Usuario Duenio { get; set; }
 
         public int getEdad()
         {
-            return DateTime.Now.Year - AñoNacimiento;
+            return DateTime.Now.Year - AnioNacimiento;
         }
+
+        public virtual double CalcularAlimento() { return 0; }
+        public virtual int CalcularComplemento() { return 0; }
     }
 }

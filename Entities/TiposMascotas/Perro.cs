@@ -8,5 +8,18 @@ namespace Entities.TiposMascotas
 {
     public class Perro : Mascota
     {
+        override
+        public double CalcularAlimento()
+        {
+            return 0.8 * Peso;
+        }
+
+        override
+        public int CalcularComplemento()
+        {
+            var complemento = getEdad() / 3;
+            if (Castrado && getEdad() > 5) complemento++;
+            return complemento;
+        }
     }
 }

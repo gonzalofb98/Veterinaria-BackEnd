@@ -11,7 +11,7 @@ namespace Entities
         public string Nombre { get; set; }
         public string Apellido { get; set; }
         public string Email { get; set; }
-        public Rol Rol { get; set; }
-        public List<Mascota> Mascotas { get; set; }
+        public string Contrasenia { get; set; }
+        
     }
 }

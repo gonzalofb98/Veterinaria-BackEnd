@@ -6,10 +6,11 @@ using System.Threading.Tasks;
 
 namespace Entities
 {
-    public class Rol
+    public class Vendedor : Usuario
     {
-        public string Nombre { get; set; }
-        public List<Usuario> Usuarios { get; set; }
-
+        public void DespacharPedido(Pedido pedido)
+        {
+            pedido.Estado = Estado.DESPACHADO;
+        }
     }
 }
