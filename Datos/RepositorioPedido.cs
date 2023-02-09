@@ -1,6 +1,7 @@
 ﻿using Entities;
 using Entities.Interface;
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace Datos
 {
-    public class RepositorioPedido : IRepository<Pedido>
+    public class RepositorioPedido : IRepositorioPedido
     {
         private static RepositorioPedido instance = null;
         public static RepositorioPedido Instance
@@ -20,31 +21,54 @@ namespace Datos
                 return instance;
             }
         }
-        protected RepositorioPedido() { IniciarPersistenciaPedido(); }
 
-        private void IniciarPersistenciaPedido()
-        {
-            throw new NotImplementedException();
-        }
+        public List<Pedido> _pedidos = new List<Pedido>();
 
         public IEnumerable<Pedido> GetTodos()
         {
-            throw new NotImplementedException();
+            return _pedidos.ToList();
+        }
+
+        public IEnumerable<Pedido> GetPedidoPorCliente(Cliente cliente) 
+        {
+            var listaPedidos = _pedidos.Where(x => x.Cliente == cliente);
+            if (!listaPedidos.Any())
+            {
+                return null;
+            }
+            else
+            {
+                return listaPedidos.ToList();
+            }
+        }
+
+        public void DespacharPedido(int id) 
+        {
+            var pedido = _pedidos.FirstOrDefault(x => x.Id == id);
+            if (pedido != null)
+            {
+                int index = _pedidos.IndexOf(pedido);
+                pedido.Estado = Estado.DESPACHADO;
+                _pedidos[index] = pedido;
+            }
         }
 
         public Pedido GetPorId(int id)
         {
-            throw new NotImplementedException();
+            var lista = _pedidos.Where(x => x.Id == id);
+            if (!lista.Any())
+            {
+                return null;
+            }
+            else
+            {
+                return lista.First();
+            }
         }
 
-        public void Agregar(Pedido entity)
+        public void Agregar(Pedido pedido)
         {
-            throw new NotImplementedException();
-        }
-
-        public void Dispose()
-        {
-            throw new NotImplementedException();
+            _pedidos.Add(pedido);
         }
     }
 }

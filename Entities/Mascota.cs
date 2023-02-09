@@ -14,6 +14,15 @@ namespace Entities
         public bool Castrado { get; set; }
         public Usuario Duenio { get; set; }
 
+        public Mascota(string nombre, int anioNacimiento, double peso, bool castrado, Usuario duenio)
+        {
+            Nombre = nombre;
+            AnioNacimiento = anioNacimiento;
+            Peso = peso;
+            Castrado = castrado;
+            Duenio = duenio;
+        }
+
         public int getEdad()
         {
             return DateTime.Now.Year - AnioNacimiento;

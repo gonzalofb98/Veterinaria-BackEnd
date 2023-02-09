@@ -8,9 +8,9 @@ namespace Entities
 {
     public class Vendedor : Usuario
     {
-        public void DespacharPedido(Pedido pedido)
+        public Vendedor(string nombre, string apellido, string email, string contrasenia) : base(nombre, apellido, email, contrasenia)
         {
-            pedido.Estado = Estado.DESPACHADO;
         }
+
     }
 }

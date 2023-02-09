@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace Datos
 {
-    public class RepositorioMascota : IRepository<Mascota>
+    public class RepositorioMascota : IRepositorioMascota
     {
         private static RepositorioMascota instance = null;
         public static RepositorioMascota Instance
@@ -20,31 +20,30 @@ namespace Datos
                 return instance;
             }
         }
-        protected RepositorioMascota() { IniciarPersistenciaMascota(); }
 
-        private void IniciarPersistenciaMascota()
-        {
-            throw new NotImplementedException();
-        }
+        public List<Mascota> _mascotas = new List<Mascota>();
 
         public IEnumerable<Mascota> GetTodos()
         {
-            throw new NotImplementedException();
+            return _mascotas.ToList();
         }
 
         public Mascota GetPorId(int id)
         {
-            throw new NotImplementedException();
+            var lista = _mascotas.Where(x => x.Id == id);
+            if (!lista.Any())
+            {
+                return null;
+            }
+            else
+            {
+                return lista.First();
+            }
         }
 
-        public void Agregar(Mascota entity)
+        public void Agregar(Mascota mascota)
         {
-            throw new NotImplementedException();
-        }
-
-        public void Dispose()
-        {
-            throw new NotImplementedException();
+            _mascotas.Add(mascota);
         }
     }
 }

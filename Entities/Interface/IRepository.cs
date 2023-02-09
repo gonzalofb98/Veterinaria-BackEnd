@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Entities.Interface
 {
-    public interface IRepository<T> : IDisposable
+    public interface IRepository<T>
         where T : EntidadBase
     {
         public IEnumerable<T> GetTodos();

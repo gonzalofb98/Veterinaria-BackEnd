@@ -8,6 +8,10 @@ namespace Entities
 {
     public class Cliente : Usuario
     {
+        public Cliente(string nombre, string apellido, string email, string contrasenia) : base(nombre, apellido, email, contrasenia)
+        {
+        }
+
         public List<Mascota> Mascotas { get; set; }
         public List<Pedido> Pedidos { get; set; }
 

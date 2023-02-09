@@ -12,6 +12,8 @@ namespace Entities
 
         public Estado Estado { get; set; }
 
+        public Cliente Cliente { get; set; }
+
         public void AgregarCombo(Combo<Mascota> combo)
         {
             Combos.Add(combo);

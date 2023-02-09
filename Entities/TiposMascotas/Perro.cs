@@ -8,6 +8,10 @@ namespace Entities.TiposMascotas
 {
     public class Perro : Mascota
     {
+        public Perro(string nombre, int anioNacimiento, double peso, bool castrado, Usuario duenio) : base(nombre, anioNacimiento, peso, castrado, duenio)
+        {
+        }
+
         override
         public double CalcularAlimento()
         {
