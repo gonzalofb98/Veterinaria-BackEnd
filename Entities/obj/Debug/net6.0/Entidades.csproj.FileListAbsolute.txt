@@ -1,0 +1,12 @@
+D:\Usuario\Desktop\Gonzalo\TotalCoin\VeterinariaPruebaTecnica\VeterinariaPruebaTecnica\Entities\bin\Debug\net6.0\Entidades.deps.json
+D:\Usuario\Desktop\Gonzalo\TotalCoin\VeterinariaPruebaTecnica\VeterinariaPruebaTecnica\Entities\bin\Debug\net6.0\Entidades.dll
+D:\Usuario\Desktop\Gonzalo\TotalCoin\VeterinariaPruebaTecnica\VeterinariaPruebaTecnica\Entities\bin\Debug\net6.0\Entidades.pdb
+D:\Usuario\Desktop\Gonzalo\TotalCoin\VeterinariaPruebaTecnica\VeterinariaPruebaTecnica\Entities\obj\Debug\net6.0\Entidades.csproj.AssemblyReference.cache
+D:\Usuario\Desktop\Gonzalo\TotalCoin\VeterinariaPruebaTecnica\VeterinariaPruebaTecnica\Entities\obj\Debug\net6.0\Entidades.GeneratedMSBuildEditorConfig.editorconfig
+D:\Usuario\Desktop\Gonzalo\TotalCoin\VeterinariaPruebaTecnica\VeterinariaPruebaTecnica\Entities\obj\Debug\net6.0\Entidades.AssemblyInfoInputs.cache
+D:\Usuario\Desktop\Gonzalo\TotalCoin\VeterinariaPruebaTecnica\VeterinariaPruebaTecnica\Entities\obj\Debug\net6.0\Entidades.AssemblyInfo.cs
+D:\Usuario\Desktop\Gonzalo\TotalCoin\VeterinariaPruebaTecnica\VeterinariaPruebaTecnica\Entities\obj\Debug\net6.0\Entidades.csproj.CoreCompileInputs.cache
+D:\Usuario\Desktop\Gonzalo\TotalCoin\VeterinariaPruebaTecnica\VeterinariaPruebaTecnica\Entities\obj\Debug\net6.0\Entidades.dll
+D:\Usuario\Desktop\Gonzalo\TotalCoin\VeterinariaPruebaTecnica\VeterinariaPruebaTecnica\Entities\obj\Debug\net6.0\refint\Entidades.dll
+D:\Usuario\Desktop\Gonzalo\TotalCoin\VeterinariaPruebaTecnica\VeterinariaPruebaTecnica\Entities\obj\Debug\net6.0\Entidades.pdb
+D:\Usuario\Desktop\Gonzalo\TotalCoin\VeterinariaPruebaTecnica\VeterinariaPruebaTecnica\Entities\obj\Debug\net6.0\ref\Entidades.dll

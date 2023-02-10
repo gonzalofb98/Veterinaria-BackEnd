@@ -1,0 +1,190 @@
+{
+  "format": 1,
+  "restore": {
+    "D:\\Usuario\\Desktop\\Gonzalo\\TotalCoin\\VeterinariaPruebaTecnica\\VeterinariaPruebaTecnica\\Utils\\Utils.csproj": {}
+  },
+  "projects": {
+    "D:\\Usuario\\Desktop\\Gonzalo\\TotalCoin\\VeterinariaPruebaTecnica\\VeterinariaPruebaTecnica\\Dtos\\Dtos.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\Usuario\\Desktop\\Gonzalo\\TotalCoin\\VeterinariaPruebaTecnica\\VeterinariaPruebaTecnica\\Dtos\\Dtos.csproj",
+        "projectName": "Dtos",
+        "projectPath": "D:\\Usuario\\Desktop\\Gonzalo\\TotalCoin\\VeterinariaPruebaTecnica\\VeterinariaPruebaTecnica\\Dtos\\Dtos.csproj",
+        "packagesPath": "C:\\Users\\Usuario\\.nuget\\packages\\",
+        "outputPath": "D:\\Usuario\\Desktop\\Gonzalo\\TotalCoin\\VeterinariaPruebaTecnica\\VeterinariaPruebaTecnica\\Dtos\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Usuario\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "D:\\Usuario\\Desktop\\Gonzalo\\TotalCoin\\VeterinariaPruebaTecnica\\VeterinariaPruebaTecnica\\Entities\\Entidades.csproj": {
+                "projectPath": "D:\\Usuario\\Desktop\\Gonzalo\\TotalCoin\\VeterinariaPruebaTecnica\\VeterinariaPruebaTecnica\\Entities\\Entidades.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.100\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\Usuario\\Desktop\\Gonzalo\\TotalCoin\\VeterinariaPruebaTecnica\\VeterinariaPruebaTecnica\\Entities\\Entidades.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\Usuario\\Desktop\\Gonzalo\\TotalCoin\\VeterinariaPruebaTecnica\\VeterinariaPruebaTecnica\\Entities\\Entidades.csproj",
+        "projectName": "Entidades",
+        "projectPath": "D:\\Usuario\\Desktop\\Gonzalo\\TotalCoin\\VeterinariaPruebaTecnica\\VeterinariaPruebaTecnica\\Entities\\Entidades.csproj",
+        "packagesPath": "C:\\Users\\Usuario\\.nuget\\packages\\",
+        "outputPath": "D:\\Usuario\\Desktop\\Gonzalo\\TotalCoin\\VeterinariaPruebaTecnica\\VeterinariaPruebaTecnica\\Entities\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Usuario\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.100\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\Usuario\\Desktop\\Gonzalo\\TotalCoin\\VeterinariaPruebaTecnica\\VeterinariaPruebaTecnica\\Utils\\Utils.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\Usuario\\Desktop\\Gonzalo\\TotalCoin\\VeterinariaPruebaTecnica\\VeterinariaPruebaTecnica\\Utils\\Utils.csproj",
+        "projectName": "Utils",
+        "projectPath": "D:\\Usuario\\Desktop\\Gonzalo\\TotalCoin\\VeterinariaPruebaTecnica\\VeterinariaPruebaTecnica\\Utils\\Utils.csproj",
+        "packagesPath": "C:\\Users\\Usuario\\.nuget\\packages\\",
+        "outputPath": "D:\\Usuario\\Desktop\\Gonzalo\\TotalCoin\\VeterinariaPruebaTecnica\\VeterinariaPruebaTecnica\\Utils\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Usuario\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "D:\\Usuario\\Desktop\\Gonzalo\\TotalCoin\\VeterinariaPruebaTecnica\\VeterinariaPruebaTecnica\\Dtos\\Dtos.csproj": {
+                "projectPath": "D:\\Usuario\\Desktop\\Gonzalo\\TotalCoin\\VeterinariaPruebaTecnica\\VeterinariaPruebaTecnica\\Dtos\\Dtos.csproj"
+              },
+              "D:\\Usuario\\Desktop\\Gonzalo\\TotalCoin\\VeterinariaPruebaTecnica\\VeterinariaPruebaTecnica\\Entities\\Entidades.csproj": {
+                "projectPath": "D:\\Usuario\\Desktop\\Gonzalo\\TotalCoin\\VeterinariaPruebaTecnica\\VeterinariaPruebaTecnica\\Entities\\Entidades.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "AutoMapper.Extensions.Microsoft.DependencyInjection": {
+              "target": "Package",
+              "version": "[12.0.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.100\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}
