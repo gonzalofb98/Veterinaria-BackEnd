@@ -23,12 +23,12 @@ namespace Datos
 
         public List<Mascota> _mascotas = new List<Mascota>();
 
-        public IEnumerable<Mascota> GetTodos()
+        public IEnumerable<Mascota> ObtenerTodos()
         {
             return _mascotas.ToList();
         }
 
-        public Mascota GetPorId(int id)
+        public Mascota BuscarPorId(int id)
         {
             var lista = _mascotas.Where(x => x.Id == id);
             if (!lista.Any())

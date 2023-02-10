@@ -12,15 +12,13 @@ namespace Entities
         public int AnioNacimiento { get; set; }
         public double Peso { get; set; }
         public bool Castrado { get; set; }
-        public Usuario Duenio { get; set; }
 
-        public Mascota(string nombre, int anioNacimiento, double peso, bool castrado, Usuario duenio)
+        public Mascota(string nombre, int anioNacimiento, double peso, bool castrado)
         {
             Nombre = nombre;
             AnioNacimiento = anioNacimiento;
             Peso = peso;
             Castrado = castrado;
-            Duenio = duenio;
         }
 
         public int getEdad()

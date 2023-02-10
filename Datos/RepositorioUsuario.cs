@@ -32,16 +32,16 @@ namespace Datos
         private void IniciarPersistenciaUsuario()
         {
             _usuarios.Add(vendedor1);
-            cliente1.RegistrarMascota(new Perro("Luna", 2011, 14.4, true, cliente1));
+            cliente1.RegistrarMascota(new Perro("Luna", 2011, 14.4, true));
             _usuarios.Add(cliente1);
         }
 
-        public IEnumerable<Usuario> GetTodos()
+        public List<Usuario> ObtenerTodos()
         {
-            return _usuarios.ToList();
+            return _usuarios;
         }
 
-        public Usuario? GetPorId(int id)
+        public Usuario? BuscarPorId(int id)
         {
             var lista = _usuarios.Where( x => x.Id == id);
             if (!lista.Any()){
@@ -58,13 +58,13 @@ namespace Datos
             _usuarios.Add(usuario);
         }
 
-        public IEnumerable<Usuario> GetClientes()
+        public List<Usuario> GetClientes()
         {
             var clientes = _usuarios.Where(x => x is Cliente);
             return clientes.ToList();
         }
 
-        public IEnumerable<Usuario> GetVendedores()
+        public List<Usuario> GetVendedores()
         {
             var vendedores = _usuarios.Where(x => x is Vendedor);
             return vendedores.ToList();

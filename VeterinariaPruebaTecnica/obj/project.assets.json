@@ -93,7 +93,7 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v6.0",
         "dependencies": {
-          "Entities": "1.0.0"
+          "Entidades": "1.0.0"
         },
         "compile": {
           "bin/placeholder/Datos.dll": {}
@@ -102,14 +102,14 @@
           "bin/placeholder/Datos.dll": {}
         }
       },
-      "Entities/1.0.0": {
+      "Entidades/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v6.0",
         "compile": {
-          "bin/placeholder/Entities.dll": {}
+          "bin/placeholder/Entidades.dll": {}
         },
         "runtime": {
-          "bin/placeholder/Entities.dll": {}
+          "bin/placeholder/Entidades.dll": {}
         }
       }
     }
@@ -245,16 +245,16 @@
       "path": "../Datos/Datos.csproj",
       "msbuildProject": "../Datos/Datos.csproj"
     },
-    "Entities/1.0.0": {
+    "Entidades/1.0.0": {
       "type": "project",
-      "path": "../Entities/Entities.csproj",
-      "msbuildProject": "../Entities/Entities.csproj"
+      "path": "../Entities/Entidades.csproj",
+      "msbuildProject": "../Entities/Entidades.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net6.0": [
       "Datos >= 1.0.0",
-      "Entities >= 1.0.0",
+      "Entidades >= 1.0.0",
       "Swashbuckle.AspNetCore >= 6.2.3"
     ]
   },
@@ -288,8 +288,8 @@
             "D:\\Usuario\\Desktop\\Gonzalo\\TotalCoin\\VeterinariaPruebaTecnica\\VeterinariaPruebaTecnica\\Datos\\Datos.csproj": {
               "projectPath": "D:\\Usuario\\Desktop\\Gonzalo\\TotalCoin\\VeterinariaPruebaTecnica\\VeterinariaPruebaTecnica\\Datos\\Datos.csproj"
             },
-            "D:\\Usuario\\Desktop\\Gonzalo\\TotalCoin\\VeterinariaPruebaTecnica\\VeterinariaPruebaTecnica\\Entities\\Entities.csproj": {
-              "projectPath": "D:\\Usuario\\Desktop\\Gonzalo\\TotalCoin\\VeterinariaPruebaTecnica\\VeterinariaPruebaTecnica\\Entities\\Entities.csproj"
+            "D:\\Usuario\\Desktop\\Gonzalo\\TotalCoin\\VeterinariaPruebaTecnica\\VeterinariaPruebaTecnica\\Entities\\Entidades.csproj": {
+              "projectPath": "D:\\Usuario\\Desktop\\Gonzalo\\TotalCoin\\VeterinariaPruebaTecnica\\VeterinariaPruebaTecnica\\Entities\\Entidades.csproj"
             }
           }
         }

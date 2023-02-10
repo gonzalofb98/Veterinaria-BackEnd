@@ -24,14 +24,14 @@ namespace Datos
 
         public List<Pedido> _pedidos = new List<Pedido>();
 
-        public IEnumerable<Pedido> GetTodos()
+        public List<Pedido> ObtenerTodos()
         {
             return _pedidos.ToList();
         }
 
-        public IEnumerable<Pedido> GetPedidoPorCliente(Cliente cliente) 
+        public List<Pedido> ObtenerPedidoPorCliente(Cliente cliente) 
         {
-            var listaPedidos = _pedidos.Where(x => x.Cliente == cliente);
+            var listaPedidos = _pedidos.Where(x => cliente.Pedidos.Contains(x));
             if (!listaPedidos.Any())
             {
                 return null;
@@ -53,7 +53,7 @@ namespace Datos
             }
         }
 
-        public Pedido GetPorId(int id)
+        public Pedido BuscarPorId(int id)
         {
             var lista = _pedidos.Where(x => x.Id == id);
             if (!lista.Any())

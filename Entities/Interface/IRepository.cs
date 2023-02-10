@@ -9,8 +9,8 @@ namespace Entities.Interface
     public interface IRepository<T>
         where T : EntidadBase
     {
-        public IEnumerable<T> GetTodos();
-        public T GetPorId(int id);
+        public List<T> ObtenerTodos();
+        public T BuscarPorId(int id);
         public void Agregar(T entity);
     }
 }

@@ -12,7 +12,18 @@ namespace Entities
 
         public Estado Estado { get; set; }
 
-        public Cliente Cliente { get; set; }
+        public int Codigo { get; set; }
+
+        public string Direccion { get; set; }
+
+        public string FechaCreacion { get; set; }
+
+        public Pedido()
+        {
+            Estado = Estado.PENDIENTE;
+            var fecha = DateTime.Now;
+            FechaCreacion = fecha.ToString();
+        }
 
         public void AgregarCombo(Combo<Mascota> combo)
         {
@@ -23,6 +34,7 @@ namespace Entities
     public enum Estado
     {
         PENDIENTE,
-        DESPACHADO
+        DESPACHADO,
+        CANCELADO
     }
 }

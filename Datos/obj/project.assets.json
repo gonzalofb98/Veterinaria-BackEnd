@@ -2,28 +2,28 @@
   "version": 3,
   "targets": {
     "net6.0": {
-      "Entities/1.0.0": {
+      "Entidades/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v6.0",
         "compile": {
-          "bin/placeholder/Entities.dll": {}
+          "bin/placeholder/Entidades.dll": {}
         },
         "runtime": {
-          "bin/placeholder/Entities.dll": {}
+          "bin/placeholder/Entidades.dll": {}
         }
       }
     }
   },
   "libraries": {
-    "Entities/1.0.0": {
+    "Entidades/1.0.0": {
       "type": "project",
-      "path": "../Entities/Entities.csproj",
-      "msbuildProject": "../Entities/Entities.csproj"
+      "path": "../Entities/Entidades.csproj",
+      "msbuildProject": "../Entities/Entidades.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net6.0": [
-      "Entities >= 1.0.0"
+      "Entidades >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -53,8 +53,8 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "D:\\Usuario\\Desktop\\Gonzalo\\TotalCoin\\VeterinariaPruebaTecnica\\VeterinariaPruebaTecnica\\Entities\\Entities.csproj": {
-              "projectPath": "D:\\Usuario\\Desktop\\Gonzalo\\TotalCoin\\VeterinariaPruebaTecnica\\VeterinariaPruebaTecnica\\Entities\\Entities.csproj"
+            "D:\\Usuario\\Desktop\\Gonzalo\\TotalCoin\\VeterinariaPruebaTecnica\\VeterinariaPruebaTecnica\\Entities\\Entidades.csproj": {
+              "projectPath": "D:\\Usuario\\Desktop\\Gonzalo\\TotalCoin\\VeterinariaPruebaTecnica\\VeterinariaPruebaTecnica\\Entities\\Entidades.csproj"
             }
           }
         }

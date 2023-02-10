@@ -8,7 +8,7 @@ namespace Entities.Interface
 {
     public interface IRepositorioUsuario : IRepository<Usuario>
     {
-        public IEnumerable<Usuario> GetClientes();
-        public IEnumerable<Usuario> GetVendedores();
+        public List<Usuario> GetClientes();
+        public List<Usuario> GetVendedores();
     }
 }
