@@ -24,15 +24,14 @@ namespace Datos
 
         public List<Usuario> _usuarios = new List<Usuario>();
 
-        static Vendedor vendedor1 = new Vendedor("Gonzalo", "Fernandez Braña", "gonzalofb98@gmail.com", "123123123");
-        static Cliente cliente1 = new Cliente("Gonzalo", "Fernandez Braña", "gonzalofb98@gmail.com", "123123123");
+        static Vendedor vendedor1 = new Vendedor("Gonzalo", "Fernandez Braña", "gonzalofb98@gmail.com");
+        static Cliente cliente1 = new Cliente("Gonzalo 2", "Fernandez Braña 2", "gonzalo@gmail.com");
 
-        protected RepositorioUsuario() { IniciarPersistenciaUsuario(); }
+        public RepositorioUsuario() { IniciarPersistenciaUsuario(); }
 
         private void IniciarPersistenciaUsuario()
         {
             _usuarios.Add(vendedor1);
-            cliente1.RegistrarMascota(new Perro("Luna", 2011, 14.4, true));
             _usuarios.Add(cliente1);
         }
 
@@ -41,7 +40,13 @@ namespace Datos
             return _usuarios;
         }
 
-        public Usuario? BuscarPorId(int id)
+        public Usuario BuscarPorEmail(string email)
+        {
+            var usuario = _usuarios.Where(x => x.Email == email);
+            return usuario.FirstOrDefault();
+        }
+
+        public Usuario? BuscarPorId(string id)
         {
             var lista = _usuarios.Where( x => x.Id == id);
             if (!lista.Any()){
@@ -53,21 +58,47 @@ namespace Datos
             }
         }
 
-        public void Agregar(Usuario usuario)
+        public bool Agregar(Usuario usuario)
         {
             _usuarios.Add(usuario);
+            return true;
         }
 
-        public List<Usuario> GetClientes()
+        public List<Usuario> ObtenerClientes()
         {
             var clientes = _usuarios.Where(x => x is Cliente);
             return clientes.ToList();
         }
 
-        public List<Usuario> GetVendedores()
+        public List<Usuario> ObtenerVendedores()
         {
             var vendedores = _usuarios.Where(x => x is Vendedor);
             return vendedores.ToList();
+        }
+
+        public bool RegistrarMascota(Mascota mascota, string email)
+        {
+            var usuario = _usuarios.Where(x => x.Email == email).FirstOrDefault() as Cliente;
+
+            usuario.RegistrarMascota(mascota);
+            return true;
+        }
+
+        public Mascota? BuscarMascota(string email, string nombre)
+        {
+            var usuario = _usuarios.Where(x => x.Email == email).FirstOrDefault() as Cliente;
+            if (usuario != null)
+            {
+                var mascota = usuario.Mascotas.Where(m => m.Nombre == nombre);
+                if (mascota.Any())
+                    return mascota.FirstOrDefault();
+                else
+                    return null;
+            }
+            else
+            {
+                return null;
+            }
         }
     }
 }

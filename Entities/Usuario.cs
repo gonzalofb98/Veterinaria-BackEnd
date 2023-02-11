@@ -13,12 +13,16 @@ namespace Entities
         public string Email { get; set; }
         public string Contrasenia { get; set; }
 
-        public Usuario(string nombre, string apellido, string email, string contrasenia)
+        public Usuario()
+        {
+            Id = Guid.NewGuid().ToString();
+        }
+        public Usuario(string nombre, string apellido, string email)
         {
             Nombre = nombre;
             Apellido = apellido;
+            Id = Guid.NewGuid().ToString();
             Email = email;
-            Contrasenia = contrasenia;
         }
     }
 }

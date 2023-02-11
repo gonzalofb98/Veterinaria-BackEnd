@@ -1,6 +1,12 @@
-using Entities;
-using Microsoft.AspNetCore.Identity;
-using Microsoft.Extensions.DependencyInjection;
+using AutoMapper;
+using Datos;
+using Entities.Interface;
+using Servicios;
+using Servicios.Interface;
+using Utils;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.IdentityModel.Tokens;
+using System.Text;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -10,6 +16,57 @@ builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+
+
+var mapperConfig = new MapperConfiguration(m =>
+{
+    m.AddProfile(new AutoMapperProfiles());
+});
+
+
+IMapper mapper = mapperConfig.CreateMapper();
+
+builder.Services.AddAutoMapper(typeof(AutoMapperProfiles));
+
+#region Inyeccion de dependencias
+builder.Services.AddSingleton<IRepositorioUsuario, RepositorioUsuario>();
+builder.Services.AddSingleton<IRepositorioPedido, RepositorioPedido>();
+builder.Services.AddSingleton<IRepositorioMascota, RepositorioMascota>();
+builder.Services.AddSingleton(mapper);
+builder.Services.AddSingleton<IUsuarioServicio, UsuarioServicio>();
+builder.Services.AddSingleton<IPedidoServicio, PedidoServicio>();
+builder.Services.AddSingleton<IMascotaServicio, MascotaServicio>();
+builder.Services.AddScoped(typeof(ITokenHandlerService), typeof(TokenHandlerService));
+#endregion
+
+builder.Configuration.AddJsonFile("appsettings.json", false, true);
+
+builder.Services.Configure<JwtConfig>(builder.Configuration.GetSection("JwtConfig"));
+
+var c = builder.Configuration.GetSection("JwtConfig:Secret");
+var d = builder.Configuration["JwtConfig:Secret"];
+
+builder.Services.AddAuthentication(options =>
+{
+    options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
+    options.DefaultScheme = JwtBearerDefaults.AuthenticationScheme;
+    options.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
+})
+    .AddJwtBearer(jwt =>
+    {
+        var key = Encoding.ASCII.GetBytes(builder.Configuration["JwtConfig:Secret"]);
+
+        jwt.SaveToken = true;
+        jwt.TokenValidationParameters = new TokenValidationParameters
+        {
+            ValidateIssuerSigningKey = true,
+            IssuerSigningKey = new SymmetricSecurityKey(key),
+            ValidateIssuer = false,
+            ValidateAudience = false,
+            RequireExpirationTime = false,
+            ValidateLifetime = true
+        };
+    });
 
 var app = builder.Build();
 

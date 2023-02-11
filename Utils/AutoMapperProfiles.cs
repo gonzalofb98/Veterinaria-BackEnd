@@ -1,5 +1,6 @@
 ﻿using AutoMapper;
 using Dtos.Dto;
+using Dtos.Request;
 using Entities;
 
 namespace Utils
@@ -14,8 +15,8 @@ namespace Utils
             CreateMap<PedidoDto, Pedido>();
             CreateMap<ComboDto, Combo<Mascota>>();
             CreateMap<Combo<Mascota>, ComboDto>();
-            CreateMap<Mascota, MascotaDto>();
-            CreateMap<MascotaDto, Mascota>();
+            CreateMap<Mascota, AgregarMascotaRequest>();
+            CreateMap<AgregarMascotaRequest, Mascota>();
             CreateMap<Vendedor, VendedorDto>();
             CreateMap<VendedorDto, Vendedor>();
         }

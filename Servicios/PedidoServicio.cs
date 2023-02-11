@@ -12,17 +12,19 @@ namespace Servicios
     public class PedidoServicio : IPedidoServicio
     {
         private readonly IRepositorioPedido _repositorioPedidos;
+
         public PedidoServicio(IRepositorioPedido repositorioPedidos)
         {
-            _repositorioPedidos = repositorioPedidos;
+            _repositorioPedidos = repositorioPedidos; 
         }
 
-        public void Agregar(Pedido nuevoPedido)
+        public bool Agregar(Pedido nuevoPedido)
         {
             _repositorioPedidos.Agregar(nuevoPedido);
+            return true;
         }
-        
-        public Pedido BuscarPorId(int id)
+
+        public Pedido BuscarPorId(string id)
         {
             return _repositorioPedidos.BuscarPorId(id);
         }
@@ -36,7 +38,7 @@ namespace Servicios
         {
             return _repositorioPedidos.ObtenerPedidoPorCliente(cliente);
         }
-        public void DespacharPedido(int id)
+        public void DespacharPedido(string id)
         {
             _repositorioPedidos.DespacharPedido(id);
         }

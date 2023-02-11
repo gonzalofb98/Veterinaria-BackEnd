@@ -8,7 +8,11 @@ namespace Entities
 {
     public class Vendedor : Usuario
     {
-        public Vendedor(string nombre, string apellido, string email, string contrasenia) : base(nombre, apellido, email, contrasenia)
+        public Vendedor()
+        {
+            Id = Guid.NewGuid().ToString();
+        }
+        public Vendedor(string nombre, string apellido, string email) : base(nombre, apellido, email)
         {
         }
 

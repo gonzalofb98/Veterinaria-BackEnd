@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Dtos.Request
 {
-    public class DtoMascotaRequest
+    public class AgregarMascotaRequest
     {
         public string Nombre { get; set; }
         public int AnioNacimiento { get; set; }

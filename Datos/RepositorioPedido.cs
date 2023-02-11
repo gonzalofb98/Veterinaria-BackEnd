@@ -42,7 +42,7 @@ namespace Datos
             }
         }
 
-        public void DespacharPedido(int id) 
+        public void DespacharPedido(string id) 
         {
             var pedido = _pedidos.FirstOrDefault(x => x.Id == id);
             if (pedido != null)
@@ -53,7 +53,7 @@ namespace Datos
             }
         }
 
-        public Pedido BuscarPorId(int id)
+        public Pedido BuscarPorId(string id)
         {
             var lista = _pedidos.Where(x => x.Id == id);
             if (!lista.Any())
@@ -66,9 +66,11 @@ namespace Datos
             }
         }
 
-        public void Agregar(Pedido pedido)
+        public bool Agregar(Pedido pedido)
         {
             _pedidos.Add(pedido);
+            return true;
         }
+
     }
 }

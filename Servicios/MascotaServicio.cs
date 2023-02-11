@@ -21,13 +21,14 @@ namespace Servicios
         {
             return _repositorioMascotas.ObtenerTodos();
         }
-        public Mascota BuscarPorId(int id)
+        public Mascota BuscarPorId(string id)
         {
             return _repositorioMascotas.BuscarPorId(id);
         }
-        public void Agregar(Mascota entity)
+        public bool Agregar(Mascota entity)
         {
             _repositorioMascotas.Agregar(entity);
+            return true;
         }
     }
 }

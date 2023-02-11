@@ -1,4 +1,5 @@
-﻿using Entities;
+﻿using Dtos.Request;
+using Entities;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,7 +10,11 @@ namespace Servicios.Interface
 {
     public interface IUsuarioServicio : IServicio<Usuario>
     {
-        public List<Usuario> GetClientes();
-        public List<Usuario> GetVendedores();
+        List<Usuario> ObtenerClientes();
+        List<Usuario> ObtenerVendedores();
+        Usuario BuscarPorEmail(string email);
+        bool VerificarContraseña(Usuario usuarioExistente, string contrasenia);
+        Mascota? BuscarMascota(string email, string nombre);
+        bool RegistrarMascota(AgregarMascotaRequest mascota, string email);
     }
 }

@@ -3,7 +3,7 @@
     public interface IServicio<T>
     {
         public List<T> ObtenerTodos();
-        public T BuscarPorId(int id);
-        public void Agregar(T entity);
+        public T BuscarPorId(string id);
+        public bool Agregar(T entity);
     }
 }

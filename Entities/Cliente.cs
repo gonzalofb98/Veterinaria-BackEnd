@@ -8,7 +8,13 @@ namespace Entities
 {
     public class Cliente : Usuario
     {
-        public Cliente(string nombre, string apellido, string email, string contrasenia) : base(nombre, apellido, email, contrasenia)
+        public Cliente()
+        {
+            Id = Guid.NewGuid().ToString();
+            Mascotas= new List<Mascota>();
+            Pedidos = new List<Pedido>();
+        }
+        public Cliente(string nombre, string apellido, string email) : base(nombre, apellido, email)
         {
         }
 

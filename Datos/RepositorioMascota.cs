@@ -23,12 +23,7 @@ namespace Datos
 
         public List<Mascota> _mascotas = new List<Mascota>();
 
-        public IEnumerable<Mascota> ObtenerTodos()
-        {
-            return _mascotas.ToList();
-        }
-
-        public Mascota BuscarPorId(int id)
+        public Mascota BuscarPorId(string id)
         {
             var lista = _mascotas.Where(x => x.Id == id);
             if (!lista.Any())
@@ -41,9 +36,15 @@ namespace Datos
             }
         }
 
-        public void Agregar(Mascota mascota)
+        public bool Agregar(Mascota mascota)
         {
             _mascotas.Add(mascota);
+            return true;
+        }
+
+        List<Mascota> IRepository<Mascota>.ObtenerTodos()
+        {
+            return _mascotas;
         }
     }
 }

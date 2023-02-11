@@ -1,0 +1,17 @@
+D:\Usuario\Desktop\Gonzalo\TotalCoin\VeterinariaPruebaTecnica\VeterinariaPruebaTecnica\Servicios\bin\Debug\net6.0\Servicios.deps.json
+D:\Usuario\Desktop\Gonzalo\TotalCoin\VeterinariaPruebaTecnica\VeterinariaPruebaTecnica\Servicios\bin\Debug\net6.0\Servicios.dll
+D:\Usuario\Desktop\Gonzalo\TotalCoin\VeterinariaPruebaTecnica\VeterinariaPruebaTecnica\Servicios\bin\Debug\net6.0\Servicios.pdb
+D:\Usuario\Desktop\Gonzalo\TotalCoin\VeterinariaPruebaTecnica\VeterinariaPruebaTecnica\Servicios\bin\Debug\net6.0\Entidades.dll
+D:\Usuario\Desktop\Gonzalo\TotalCoin\VeterinariaPruebaTecnica\VeterinariaPruebaTecnica\Servicios\bin\Debug\net6.0\Entidades.pdb
+D:\Usuario\Desktop\Gonzalo\TotalCoin\VeterinariaPruebaTecnica\VeterinariaPruebaTecnica\Servicios\obj\Debug\net6.0\Servicios.csproj.AssemblyReference.cache
+D:\Usuario\Desktop\Gonzalo\TotalCoin\VeterinariaPruebaTecnica\VeterinariaPruebaTecnica\Servicios\obj\Debug\net6.0\Servicios.GeneratedMSBuildEditorConfig.editorconfig
+D:\Usuario\Desktop\Gonzalo\TotalCoin\VeterinariaPruebaTecnica\VeterinariaPruebaTecnica\Servicios\obj\Debug\net6.0\Servicios.AssemblyInfoInputs.cache
+D:\Usuario\Desktop\Gonzalo\TotalCoin\VeterinariaPruebaTecnica\VeterinariaPruebaTecnica\Servicios\obj\Debug\net6.0\Servicios.AssemblyInfo.cs
+D:\Usuario\Desktop\Gonzalo\TotalCoin\VeterinariaPruebaTecnica\VeterinariaPruebaTecnica\Servicios\obj\Debug\net6.0\Servicios.csproj.CoreCompileInputs.cache
+D:\Usuario\Desktop\Gonzalo\TotalCoin\VeterinariaPruebaTecnica\VeterinariaPruebaTecnica\Servicios\obj\Debug\net6.0\Servicios.csproj.CopyComplete
+D:\Usuario\Desktop\Gonzalo\TotalCoin\VeterinariaPruebaTecnica\VeterinariaPruebaTecnica\Servicios\obj\Debug\net6.0\Servicios.dll
+D:\Usuario\Desktop\Gonzalo\TotalCoin\VeterinariaPruebaTecnica\VeterinariaPruebaTecnica\Servicios\obj\Debug\net6.0\refint\Servicios.dll
+D:\Usuario\Desktop\Gonzalo\TotalCoin\VeterinariaPruebaTecnica\VeterinariaPruebaTecnica\Servicios\obj\Debug\net6.0\Servicios.pdb
+D:\Usuario\Desktop\Gonzalo\TotalCoin\VeterinariaPruebaTecnica\VeterinariaPruebaTecnica\Servicios\obj\Debug\net6.0\ref\Servicios.dll
+D:\Usuario\Desktop\Gonzalo\TotalCoin\VeterinariaPruebaTecnica\VeterinariaPruebaTecnica\Servicios\bin\Debug\net6.0\Dtos.dll
+D:\Usuario\Desktop\Gonzalo\TotalCoin\VeterinariaPruebaTecnica\VeterinariaPruebaTecnica\Servicios\bin\Debug\net6.0\Dtos.pdb

@@ -8,7 +8,10 @@ namespace Entities.Interface
 {
     public interface IRepositorioUsuario : IRepository<Usuario>
     {
-        public List<Usuario> GetClientes();
-        public List<Usuario> GetVendedores();
+        List<Usuario> ObtenerClientes();
+        List<Usuario> ObtenerVendedores();
+        Usuario BuscarPorEmail(string email);
+        bool RegistrarMascota(Mascota mascota, string email);
+        Mascota? BuscarMascota( string email, string nombre);
     }
 }

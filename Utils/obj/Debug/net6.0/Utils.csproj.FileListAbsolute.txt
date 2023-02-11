@@ -13,3 +13,7 @@ D:\Usuario\Desktop\Gonzalo\TotalCoin\VeterinariaPruebaTecnica\VeterinariaPruebaT
 D:\Usuario\Desktop\Gonzalo\TotalCoin\VeterinariaPruebaTecnica\VeterinariaPruebaTecnica\Utils\obj\Debug\net6.0\refint\Utils.dll
 D:\Usuario\Desktop\Gonzalo\TotalCoin\VeterinariaPruebaTecnica\VeterinariaPruebaTecnica\Utils\obj\Debug\net6.0\Utils.pdb
 D:\Usuario\Desktop\Gonzalo\TotalCoin\VeterinariaPruebaTecnica\VeterinariaPruebaTecnica\Utils\obj\Debug\net6.0\ref\Utils.dll
+D:\Usuario\Desktop\Gonzalo\TotalCoin\VeterinariaPruebaTecnica\VeterinariaPruebaTecnica\Utils\bin\Debug\net6.0\Dtos.dll
+D:\Usuario\Desktop\Gonzalo\TotalCoin\VeterinariaPruebaTecnica\VeterinariaPruebaTecnica\Utils\bin\Debug\net6.0\Servicios.dll
+D:\Usuario\Desktop\Gonzalo\TotalCoin\VeterinariaPruebaTecnica\VeterinariaPruebaTecnica\Utils\bin\Debug\net6.0\Dtos.pdb
+D:\Usuario\Desktop\Gonzalo\TotalCoin\VeterinariaPruebaTecnica\VeterinariaPruebaTecnica\Utils\bin\Debug\net6.0\Servicios.pdb

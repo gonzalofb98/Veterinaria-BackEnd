@@ -6,13 +6,17 @@ using System.Threading.Tasks;
 
 namespace Entities
 {
-    public abstract class Mascota : EntidadBase
+    public class Mascota : EntidadBase
     {
         public string Nombre { get; set; }
         public int AnioNacimiento { get; set; }
         public double Peso { get; set; }
         public bool Castrado { get; set; }
 
+        public Mascota()
+        {
+            Id = Guid.NewGuid().ToString();
+        }
         public Mascota(string nombre, int anioNacimiento, double peso, bool castrado)
         {
             Nombre = nombre;
