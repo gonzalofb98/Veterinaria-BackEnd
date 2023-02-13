@@ -29,13 +29,9 @@ IMapper mapper = mapperConfig.CreateMapper();
 builder.Services.AddAutoMapper(typeof(AutoMapperProfiles));
 
 #region Inyeccion de dependencias
-builder.Services.AddSingleton<IRepositorioUsuario, RepositorioUsuario>();
-builder.Services.AddSingleton<IRepositorioPedido, RepositorioPedido>();
-builder.Services.AddSingleton<IRepositorioMascota, RepositorioMascota>();
+builder.Services.AddSingleton<IRepositorio, Repositorio>();
 builder.Services.AddSingleton(mapper);
 builder.Services.AddSingleton<IUsuarioServicio, UsuarioServicio>();
-builder.Services.AddSingleton<IPedidoServicio, PedidoServicio>();
-builder.Services.AddSingleton<IMascotaServicio, MascotaServicio>();
 builder.Services.AddScoped(typeof(ITokenHandlerService), typeof(TokenHandlerService));
 #endregion
 

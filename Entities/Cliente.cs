@@ -13,6 +13,7 @@ namespace Entities
             Id = Guid.NewGuid().ToString();
             Mascotas= new List<Mascota>();
             Pedidos = new List<Pedido>();
+            PedidoPendiente = new Pedido();
         }
         public Cliente(string nombre, string apellido, string email) : base(nombre, apellido, email)
         {
@@ -20,6 +21,7 @@ namespace Entities
 
         public List<Mascota> Mascotas { get; set; }
         public List<Pedido> Pedidos { get; set; }
+        public Pedido PedidoPendiente { get; set; }
 
         public void RegistrarMascota(Mascota mascota)
         {
@@ -28,6 +30,11 @@ namespace Entities
         public void AgregarPedido(Pedido pedido)
         {
             Pedidos.Add(pedido);
+        }
+
+        public Pedido? BuscarPedido(string codigo)
+        {
+            return Pedidos.Where(x => x.Codigo == codigo).FirstOrDefault();
         }
     }
 }

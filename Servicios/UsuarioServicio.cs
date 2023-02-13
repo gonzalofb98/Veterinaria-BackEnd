@@ -8,17 +8,15 @@ namespace Servicios
 {
     public class UsuarioServicio : IUsuarioServicio
     {
-        private readonly IRepositorioUsuario _repositorioUsuarios;
-        private readonly IMapper _mapper;
-        public UsuarioServicio(IRepositorioUsuario repositorioUsuarios, IMapper mapper)
+        private readonly IRepositorio _repositorioUsuarios;
+        public UsuarioServicio(IRepositorio repositorioUsuarios)
         {
             _repositorioUsuarios = repositorioUsuarios;
-            _mapper = mapper;
         }
 
         public bool Agregar(Usuario entity)
         {
-            _repositorioUsuarios.Agregar(entity);
+            _repositorioUsuarios.AgregarPedido(entity);
             return true;
         }
 
@@ -30,7 +28,7 @@ namespace Servicios
 
         public Usuario BuscarPorId(string id)
         {
-            return _repositorioUsuarios.BuscarPorId(id);
+            return _repositorioUsuarios.BuscarPedidoPorId(id);
         }
 
         public List<Usuario> ObtenerClientes()
@@ -45,7 +43,7 @@ namespace Servicios
 
         public List<Usuario> ObtenerTodos()
         {
-            return _repositorioUsuarios.ObtenerTodos();
+            return _repositorioUsuarios.ObtenerTodosLosPedidos();
         }
 
         public bool VerificarContraseña(Usuario usuarioExistente, string contrasenia)
@@ -62,11 +60,29 @@ namespace Servicios
             return _repositorioUsuarios.BuscarMascota(email, nombre);
         }
 
-        public bool RegistrarMascota(AgregarMascotaRequest mascotaDto, string email)
+        public bool RegistrarMascota(Mascota mascota, string email)
         {
-            var mascota = _mapper.Map<Mascota>(mascotaDto);
-
             return _repositorioUsuarios.RegistrarMascota(mascota, email);
+        }
+
+        public bool AgregarPedido(string email, Pedido pedido)
+        {
+            return _repositorioUsuarios.AgregarPedido(email, pedido);
+        }
+
+        public Pedido BuscarPedidoPorCodigo(string email, string codigo)
+        {
+            return _repositorioUsuarios.BuscarPedidoPorCodigo(email, codigo);
+        }
+
+        public bool AgregarComboAPedido(Cliente usuarioExistente, Combo<Mascota> combo)
+        {
+            return _repositorioUsuarios.AgregarComboAPedido(usuarioExistente, combo);
+        }
+
+        public bool DespacharPedido(Cliente usuarioExistente, string codigo)
+        {
+            return _repositorioUsuarios.DespacharPedido(usuarioExistente, codigo);
         }
     }
 }

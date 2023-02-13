@@ -1,9 +1,14 @@
-﻿using Dtos.Request;
+﻿using AutoMapper;
+using Dtos;
+using Dtos.Request;
+using Dtos.Response;
 using Entities;
 using Entities.Interface;
+using Entities.TiposMascotas;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Servicios.Interface;
+using System.Collections.ObjectModel;
 
 namespace VeterinariaPruebaTecnica.Controllers
 {
@@ -12,22 +17,37 @@ namespace VeterinariaPruebaTecnica.Controllers
     public class UsuarioController : ControllerBase
     {
         private readonly IUsuarioServicio _usuarioServicio;
-        private readonly IMascotaServicio _mascotaServicio;
-        public UsuarioController(IUsuarioServicio servicioUsuario, IMascotaServicio servicioMascota)
+        private readonly IMapper _mapper;
+
+        public UsuarioController(IUsuarioServicio servicioUsuario, IMapper mapper)
         {
             _usuarioServicio = servicioUsuario;
-            _mascotaServicio = servicioMascota;
+            _mapper = mapper;
         }
 
         [HttpGet]
         [Route("Clientes")]
         public async Task<IActionResult> ObtenerClientes()
         {
-            var response = _usuarioServicio.ObtenerClientes();
-            
-            if(response == null)
+            var clientes = _usuarioServicio.ObtenerClientes();
+            var response = _mapper.Map<List<ClienteDto>>(clientes);
+
+            if (response == null)
                 return Ok("No hay clientes.");
             
+            return Ok(response);
+        }
+
+        [HttpGet]
+        [Route("ClientesMascotas")]
+        public async Task<IActionResult> ObtenerClientesMascotas()
+        {
+            var clientes = _usuarioServicio.ObtenerClientes();
+            var response = _mapper.Map<List<ClientesMascotasResponse>>(clientes);
+
+            if (response == null)
+                return Ok("No hay clientes.");
+
             return Ok(response);
         }
 
@@ -35,7 +55,9 @@ namespace VeterinariaPruebaTecnica.Controllers
         [Route("Vendedores")]
         public async Task<IActionResult> ObtenerVendedores()
         {
-            var response = _usuarioServicio.ObtenerVendedores();
+            var vendedores = _usuarioServicio.ObtenerVendedores();
+
+            var response = _mapper.Map<List<VendedorDto>>(vendedores);
 
             if (response == null)
                 return Ok("No hay vendedores.");
@@ -47,20 +69,40 @@ namespace VeterinariaPruebaTecnica.Controllers
         [Route("RegistrarMascota")]
         public async Task<IActionResult> RegistrarMascota([FromQuery] string email, [FromBody] AgregarMascotaRequest mascotaDto)
         {
-            if (ModelState.IsValid)
+            if (!ModelState.IsValid)
             {
-                var usuarioExistente = _usuarioServicio.BuscarPorEmail(email);
-                if (usuarioExistente == null)
-                {
-                    return BadRequest("El email " + email + " no esta registrado");
-                }
-                var mascotaExistente = _usuarioServicio.BuscarMascota(email, mascotaDto.Nombre);
-                if (mascotaExistente != null)
-                {
-                    return BadRequest("La mascota "+mascotaDto.Nombre+" ya esta registrada");
-                }
+                return BadRequest("Se produjo algun error al registrar la mascota");
+            }
 
-                var isCreated = _usuarioServicio.RegistrarMascota(mascotaDto, email);
+            var usuarioExistente = _usuarioServicio.BuscarPorEmail(email);
+            if (usuarioExistente == null)
+            {
+                return BadRequest("El email " + email + " no esta registrado");
+            }
+            var mascotaExistente = _usuarioServicio.BuscarMascota(email, mascotaDto.Nombre);
+            if (mascotaExistente != null)
+            {
+                return BadRequest("La mascota " + mascotaDto.Nombre + " ya esta registrada");
+            }
+
+            Mascota mascota;
+
+            switch (mascotaDto.TipoMascota)
+            {
+                case "Perro":
+                    mascota = _mapper.Map<Perro>(mascotaDto);
+                    break;
+                case "Gato":
+                    mascota = _mapper.Map<Gato>(mascotaDto);
+                    break;
+                default:
+                    mascota = null;
+                    break;
+            }
+
+            if (mascota != null)
+            {
+                var isCreated = _usuarioServicio.RegistrarMascota(mascota, email);
 
                 if (isCreated)
                 {
@@ -70,11 +112,10 @@ namespace VeterinariaPruebaTecnica.Controllers
                 {
                     return BadRequest("Error, no se pudo registrar.");
                 }
-
             }
             else
             {
-                return BadRequest("Se produjo algun error al registrar la mascota");
+                return BadRequest("Error, no se reconocio el tipo de mascota.");
             }
         }
 

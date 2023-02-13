@@ -15,6 +15,10 @@ namespace Servicios.Interface
         Usuario BuscarPorEmail(string email);
         bool VerificarContraseña(Usuario usuarioExistente, string contrasenia);
         Mascota? BuscarMascota(string email, string nombre);
-        bool RegistrarMascota(AgregarMascotaRequest mascota, string email);
+        bool RegistrarMascota(Mascota mascota, string email);
+        public bool AgregarPedido(string email, Pedido pedido);
+        Pedido BuscarPedidoPorCodigo(string email, string codigo);
+        bool AgregarComboAPedido(Cliente usuarioExistente, Combo<Mascota> combo);
+        bool DespacharPedido(Cliente usuarioExistente, string codigo);
     }
 }

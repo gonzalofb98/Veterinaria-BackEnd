@@ -5,11 +5,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Dtos.Dto
+namespace Dtos
 {
     public class PedidoDto
     {
-        public int Codigo { get; set; }
+        public string Codigo { get; set; }
         public string Direccion { get; set; }
         public List<ComboDto> Combos { get; set; }
         public Estado Estado { get; set; }

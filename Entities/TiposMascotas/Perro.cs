@@ -10,6 +10,7 @@ namespace Entities.TiposMascotas
     {
         public Perro(string nombre, int anioNacimiento, double peso, bool castrado) : base(nombre, anioNacimiento, peso, castrado)
         {
+            Id = Guid.NewGuid().ToString();
             CalcularAlimento();
             CalcularComplemento();
         }

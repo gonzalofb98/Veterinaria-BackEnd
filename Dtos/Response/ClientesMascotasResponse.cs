@@ -1,16 +1,17 @@
-﻿using System;
+﻿using Entities;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Dtos.Dto
+namespace Dtos.Response
 {
-    public class ClienteDto
+    public class ClientesMascotasResponse
     {
         public string Nombre { get; set; }
         public string Apellido { get; set; }
         public string Email { get; set; }
-        public string Contraseña { get; set; }
+        public List<Mascota> Mascotas { get; set; }
     }
 }
