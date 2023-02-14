@@ -17,8 +17,7 @@ namespace Entities.Interface
         Pedido BuscarPedidoPorCodigo(string email, string codigo);
         bool AgregarComboAPedido(Cliente usuarioExistente, Combo<Mascota> combo);
         bool DespacharPedido(Cliente usuarioExistente, string codigo);
-        public List<Pedido> ObtenerTodosLosPedidos();
-        public Pedido BuscarPedidoPorId(string id);
-        public bool AgregarPedido(Pedido entity);
+        public List<Usuario> ObtenerTodosLosPedidos();
+        Usuario AgregarUsuario(Usuario entity);
     }
 }

@@ -39,7 +39,7 @@ namespace VeterinariaPruebaTecnica.Controllers
                 return BadRequest("El correo electronico indicado ya existe!");
             }
 
-            var isCreated = _usuarioServicio.Agregar(new Cliente()
+            var user = _usuarioServicio.Agregar(new Cliente()
             {
                 Nombre = usuario.Nombre,
                 Apellido = usuario.Apellido,
@@ -47,7 +47,7 @@ namespace VeterinariaPruebaTecnica.Controllers
                 Contrasenia = usuario.Contrasenia,
             });
 
-            if (isCreated)
+            if (user != null)
             {
                 return Ok();
             }
@@ -72,7 +72,7 @@ namespace VeterinariaPruebaTecnica.Controllers
                 return BadRequest("El correo electronico indicado ya existe!");
             }
 
-            var isCreated = _usuarioServicio.Agregar(new Vendedor()
+            var user = _usuarioServicio.Agregar(new Vendedor()
             {
                 Nombre = usuario.Nombre,
                 Apellido = usuario.Apellido,
@@ -80,7 +80,7 @@ namespace VeterinariaPruebaTecnica.Controllers
                 Contrasenia = usuario.Contrasenia,
             });
 
-            if (isCreated)
+            if (user != null)
             {
                 return Ok();
             }
@@ -134,7 +134,7 @@ namespace VeterinariaPruebaTecnica.Controllers
 
                 return Ok(new LoginUsuarioResponse()
                 {
-                    TipoCliente = usuarioExistente.GetType().ToString(),
+                    Tipo = usuarioExistente.GetType().ToString(),
                     Email = usuario.Email,
                     Login = true,
                     Token = jwtToken

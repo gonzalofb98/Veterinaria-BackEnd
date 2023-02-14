@@ -8,7 +8,7 @@ namespace Dtos.Response
 {
     public class LoginUsuarioResponse
     {
-        public string TipoCliente { get; set; }
+        public string Tipo { get; set; }
         public string Email { get; set; }
         public string Token { get; set; }
         public bool Login { get; set; }

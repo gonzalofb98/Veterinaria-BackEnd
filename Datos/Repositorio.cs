@@ -39,6 +39,12 @@ namespace Datos
             _usuarios.Add(cliente1);
         }
 
+        public Usuario AgregarUsuario(Usuario entity)
+        {
+            _usuarios.Add(entity);
+            return _usuarios.Where(x => x == entity).FirstOrDefault();
+        }
+
         public List<Usuario> ObtenerTodosLosPedidos()
         {
             return _usuarios;
@@ -60,12 +66,6 @@ namespace Datos
             {
                 return lista.First();
             }
-        }
-
-        public bool AgregarPedido(Usuario usuario)
-        {
-            _usuarios.Add(usuario);
-            return true;
         }
 
         public List<Usuario> ObtenerClientes()
@@ -156,5 +156,7 @@ namespace Datos
             else
                 return false;
         }
+
+        
     }
 }

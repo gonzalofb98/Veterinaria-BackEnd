@@ -14,21 +14,15 @@ namespace Servicios
             _repositorioUsuarios = repositorioUsuarios;
         }
 
-        public bool Agregar(Usuario entity)
+        public Usuario Agregar(Usuario entity)
         {
-            _repositorioUsuarios.AgregarPedido(entity);
-            return true;
+            return _repositorioUsuarios.AgregarUsuario(entity); ;
         }
 
         public Usuario? BuscarPorEmail(string email)
         {
             var usuario = _repositorioUsuarios.BuscarPorEmail(email);
             return usuario;
-        }
-
-        public Usuario BuscarPorId(string id)
-        {
-            return _repositorioUsuarios.BuscarPedidoPorId(id);
         }
 
         public List<Usuario> ObtenerClientes()
@@ -39,11 +33,6 @@ namespace Servicios
         public List<Usuario> ObtenerVendedores()
         {
             return _repositorioUsuarios.ObtenerVendedores();
-        }
-
-        public List<Usuario> ObtenerTodos()
-        {
-            return _repositorioUsuarios.ObtenerTodosLosPedidos();
         }
 
         public bool VerificarContraseña(Usuario usuarioExistente, string contrasenia)

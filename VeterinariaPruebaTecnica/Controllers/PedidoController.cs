@@ -120,7 +120,7 @@ namespace VeterinariaPruebaTecnica.Controllers
         [Route("DespacharPedido")]
         public async Task<IActionResult> DespacharPedido([FromQuery] string email, [FromBody] DespacharPedidoRequest pedidoDto)
         {
-            if (ModelState.IsValid)
+            if (!ModelState.IsValid)
             {
                 return BadRequest("Se produjo un error al despachar el pedido.");
             }
