@@ -14,7 +14,6 @@ namespace Dtos.Request
         [EmailAddress]
         public string Email { get; set; }
         [Required]
-        [PasswordPropertyText]
         public string Contrasenia { get; set; }
     }
 }

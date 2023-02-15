@@ -157,6 +157,11 @@ namespace Datos
                 return false;
         }
 
-        
+        public bool LimpiarCombos(Cliente usuarioExistente)
+        {
+            var usuario = _usuarios.Where(x => x == usuarioExistente).FirstOrDefault() as Cliente;
+            usuario.PedidoPendiente.Combos.Clear();
+            return true;
+        }
     }
 }

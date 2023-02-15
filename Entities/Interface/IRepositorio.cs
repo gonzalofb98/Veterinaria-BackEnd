@@ -19,5 +19,6 @@ namespace Entities.Interface
         bool DespacharPedido(Cliente usuarioExistente, string codigo);
         public List<Usuario> ObtenerTodosLosPedidos();
         Usuario AgregarUsuario(Usuario entity);
+        bool LimpiarCombos(Cliente usuarioExistente);
     }
 }

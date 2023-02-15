@@ -51,7 +51,7 @@ namespace VeterinariaPruebaTecnica.Controllers
 
         [HttpPost]
         [Route("RegistrarCombo")]
-        public async Task<IActionResult> RegistrarPedido([FromQuery] string email, [FromBody] AgregarComboRequest comboDto)
+        public async Task<IActionResult> RegistrarCombo([FromQuery] string email, [FromBody] AgregarComboRequest comboDto)
         {
             if (!ModelState.IsValid)
             {
@@ -73,7 +73,36 @@ namespace VeterinariaPruebaTecnica.Controllers
 
             var combo = new Combo<Mascota>(mascota);
 
+            var comboResponse = _mapper.Map<ComboDto>(combo);
+
             var isCreated = _usuarioServicio.AgregarComboAPedido(usuarioExistente, combo);
+
+            if (isCreated)
+            {
+                return Ok(comboResponse);
+            }
+            else
+            {
+                return BadRequest("Error, no se pudo registrar el combo.");
+            }
+        }
+
+        [HttpPost]
+        [Route("LimpiarCombos")]
+        public async Task<IActionResult> LimpiarCombos([FromQuery] string email)
+        {
+            if (!ModelState.IsValid)
+            {
+                return BadRequest("Se produjo un error al registrar el combo");
+            }
+
+            var usuarioExistente = _usuarioServicio.BuscarPorEmail(email) as Cliente;
+            if (usuarioExistente == null)
+            {
+                return BadRequest("El email " + email + " no esta registrado");
+            }
+
+            var isCreated = _usuarioServicio.LimpiarCombos(usuarioExistente);
 
             if (isCreated)
             {

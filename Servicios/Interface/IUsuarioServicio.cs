@@ -22,5 +22,6 @@ namespace Servicios.Interface
 
         bool VerificarContraseña(Usuario usuarioExistente, string contrasenia);
         bool DespacharPedido(Cliente usuarioExistente, string codigo);
+        bool LimpiarCombos(Cliente usuarioExistente);
     }
 }

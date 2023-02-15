@@ -73,5 +73,10 @@ namespace Servicios
         {
             return _repositorioUsuarios.DespacharPedido(usuarioExistente, codigo);
         }
+
+        public bool LimpiarCombos(Cliente usuarioExistente)
+        {
+            return _repositorioUsuarios.LimpiarCombos(usuarioExistente);
+        }
     }
 }
